@@ -1,5 +1,6 @@
 <script setup>
 import MainSearch from '@/components/MainSearch.vue'
+import MainCards from '@/components/MainCards.vue'
   
 </script>
 
@@ -7,7 +8,7 @@ import MainSearch from '@/components/MainSearch.vue'
 <template>
   <div class="wrapper"></div>
   <MainSearch />
-  <h1>Hello There</h1>
+  <MainCards />
 </template>
 
 <style scoped lang="postcss">
