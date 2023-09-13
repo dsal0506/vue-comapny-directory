@@ -1,7 +1,7 @@
 <script setup>
 import MainSearch from '@/components/MainSearch.vue'
 import MainCards from '@/components/MainCards.vue'
-  
+import MainPagination from '@/components/MainPagination.vue'
 </script>
 
 
@@ -9,6 +9,7 @@ import MainCards from '@/components/MainCards.vue'
   <div class="wrapper"></div>
   <MainSearch />
   <MainCards />
+  <MainPagination />
 </template>
 
 <style scoped lang="postcss">
