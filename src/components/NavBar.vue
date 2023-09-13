@@ -1,6 +1,6 @@
 <script setup>
   import { ref } from 'vue'
-  const brand = ref('🏫 Fake Comanpany Directory')
+  const brand = ref('🏫 Directory Lookup')
 </script>
 
 <template>
@@ -20,12 +20,12 @@
 
 <style scoped lang="postcss">
   nav {
-    @apply flex h-20 bg-slate-900 text-slate-200;
+    @apply flex h-20 bg-blue-500 text-slate-200;
     .wrapper {
       @apply container mx-auto flex w-full items-center justify-between;
       .brand {
         &-title {
-          @apply text-2xl font-bold text-yellow-500;
+          @apply text-3xl font-bold text-gray-800;
         }
       }
       .menu {

@@ -13,10 +13,10 @@
   .wrapper{
     @apply relative flex w-full items-stretch;
     .search{
-      @apply px-8 py-4 placeholder-slate-400 text-slate-700 rounded-md border-0 outline-none focus:ring focus:ring-yellow-500;
+      @apply px-8 py-4 placeholder-slate-400 text-slate-700 rounded-md border-0 outline-none focus:ring focus:ring-red-500;
     }
     .icon{
-      @apply absolute right-0 pr-8 py-4 z-10 text-slate-400;
+      @apply absolute right-0 pr-8 py-4 z-10 text-green-700;
     }
   }
 
