@@ -1,5 +1,8 @@
 <script setup>
-  import { ref } from 'vue'
+import { ref } from 'vue'
+import { useAuth } from '@/composables/useAuth'
+
+const auth = useAuth()
   const brand = ref('🏫 Directory Lookup')
 </script>
 
@@ -10,9 +13,14 @@
         <span class="brand-title">{{ brand }}</span>
       </RouterLink>
       <div class="menu">
-        <a href="#" class="menu-item">Department</a>
-        <a href="#" class="menu-item">Setings</a>
-        <a href="#" class="menu-login">Logout</a>
+        <RouterLink :to="{name: 'Home'}" href="#" class="menu-item">Department</RouterLink>
+      <div v-if="isAuthenticated">
+        <RouterLink :to="{name: 'Home'}" href="#" class="menu-item">Setings</RouterLink>
+        <button href="#" class="menu-logout" @click="logout">Logout</button>
+      </div>
+        <div v-else>
+        <RouterLink :to="{name: 'Home'}" href="#" class="menu-login">Login</RouterLink>
+      </div>
       </div>
     </div>
   </nav>
@@ -34,10 +42,13 @@
           @apply rounded-md px-4 py-2 hover:bg-yellow-500 hover:text-slate-900;
         }
         &-login {
+          @apply rounded-md bg-green-500 px-4 py-2 text-red-100 hover:bg-green-500;
+        }
+        &-logout {
           @apply rounded-md bg-red-500 px-4 py-2 text-red-100 hover:bg-red-700;
         }
       }
-    }
+    } 
   }
 
 </style>
