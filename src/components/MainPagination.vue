@@ -1,13 +1,3 @@
-<template>
-  <div class="pagination">
-    <button class="action" :disabled="activePage.value === 1" @click="prevPage">Prev</button>
-    <button class="page" v-for="page in pages.value" :class="page === activePage.value ? 'active' : ''" @click="activePage.value = page">
-      {{ page }}
-    </button>
-    <button class="action" :disabled="activePage.value === pages.value" @click="nextPage">Next</button>
-  </div>
-</template>
-
 <script setup>
   import { ref } from 'vue'
   const pages = ref(10)
@@ -18,13 +8,28 @@
       activePage.value--
     }
   }
-
   const nextPage = () => {
     if (activePage.value < pages.value) {
       activePage.value++
     }
   }
 </script>
+
+<template>
+  <div class="pagination">
+    <button class="action" :disabled="activePage === 1" @click="prevPage">Prev</button>
+    <button
+      v-for="page in pages"
+      :key="page"
+      class="page"
+      :class="page === activePage ? 'active' : ''"
+      @click="activePage = page"
+    >
+      {{ page }}
+    </button>
+    <button class="action" :disabled="activePage === pages" @click="nextPage">Next</button>
+  </div>
+</template>
 
 <style lang="postcss" scoped>
   .pagination {
