@@ -15,7 +15,8 @@
   "dependencies": {
     "@rushstack/eslint-patch": "^1.1.4",
     "@vue/eslint-config-prettier": "^7.0.0",
-    "firebase": "^10.4.0",
+    "axios": "^1.6.2",
+    "firebase": "^10.7.1",
     "vue": "^3.2.37",
     "vue-router": "^4.1.5"
   },
